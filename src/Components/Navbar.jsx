@@ -144,7 +144,7 @@ const Navbar = () => {
 
           {/* Additional Buttons at the End */}
           <div className="hidden md:flex gap-2 ml-auto order-4">
-            <NavLink to="/wanted"><button className="px-2 py-2 text-black mr-10 text-sm">WANTED</button></NavLink>
+            <NavLink to="/wanted"><button className="px-2 py-2 font-semibold mr-10 text-gray-800 text-sm">WANTED</button></NavLink>
             <button
               onClick={() => setShowSignIn(true)}
               className="px-2 py-2 mr-20 border font-medium border-gray-900 text-black rounded-lg"
@@ -175,7 +175,7 @@ const Navbar = () => {
           <nav className="flex flex-col gap-4 p-4">
             <button 
               onClick={() => setShowSignIn(true)}
-              className="px-4 py-2 text-gray-900 border border-gray-400 rounded-md text-xs"
+              className="px-4 py-2 text-gray-800 border border-gray-300 rounded-md text-xs"
             >
               SIGN IN
             </button>
@@ -183,7 +183,7 @@ const Navbar = () => {
             {["BUY", "SELL", "RENT"].map((item, index) => (
               <div key={index} className="relative">
                 <button 
-                  className="flex items-center w-full text-gray-700  hover:text-gray-400 text-xs font-bold"
+                  className="flex items-center w-full text-gray-700  hover:text-gray-400 text-sm font-semibold ml-2"
                   onClick={() => setDropdownOpen(dropdownOpen === index ? null : index)}
                 >
                   {item}
@@ -211,15 +211,15 @@ const Navbar = () => {
               </div>
             ))}
             {/* More buttons */}
-            <button className="px-2 py-2 text-gray-700 mr-28 text-xs text-left">More</button>
-            <NavLink to="/invest"><button className="px-2 py-2 text-gray-700 mr-28 text-xs text-left">Invest</button></NavLink>
+            <button className="px-2 py-2 text-gray-700 mr-28 text-xs text-left font-semibold">More</button>
+            <NavLink to="/invest"><button className="px-2 py-2 text-gray-700 mr-28 text-xs text-left font-semibold">Invest</button></NavLink>
             <button 
             onClick={() => setShowModal(true)}
-            className="px-2 py-2 text-gray-700 mr-9 text-xs text-left"
+            className="px-2 py-2 text-gray-700  text-xs text-left font-semibold"
             >
             Building Materials
             </button>
-            <NavLink to="/wanted"><button className="px-2 py-2 text-gray-900 border border-gray-400 rounded-md text-xs mt-10">WANTED</button></NavLink>
+            <NavLink to="/wanted"><button className="px-12 py-2 text-gray-900 border border-gray-400 rounded-md text-xs ">WANTED</button></NavLink>
           </nav>
         </div>
         {showModal && <New onClose={() => setShowModal(false)} />}

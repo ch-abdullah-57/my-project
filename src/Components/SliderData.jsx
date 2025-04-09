@@ -254,7 +254,11 @@ function CardSlider() {
               <button
                 key={index}
                 onClick={() => handleCategoryChange("top", category)}
-                className={`px-4 py-2 rounded shadow-md whitespace-nowrap "bg-transparent text-gray-600 border  border-gray-700 rounded-lg" : "bg-gray-300 text-black"   `}
+                className={`px-4 py-2 rounded shadow-md whitespace-nowrap border ${
+                  activeCategories.top === category 
+                    ? "border-gray-800 " 
+                    : "border-gray-300 text-gray-600"
+                }`}
               >
                 {sliderData[category].label} {/* Use the custom label */}
               </button>
@@ -309,7 +313,10 @@ function CardSlider() {
               <button
                 key={index}
                 onClick={() => handleCategoryChange("bottom", category)}
-                className={`px-4 py-2  shadow-md whitespace-nowrap  "bg-transparent border rounded-lg   border-gray-800 text-white" : "bg-gray-300 text-black"
+                className={`px-4 py-2 rounded shadow-md whitespace-nowrap border ${
+                  activeCategories.bottom === category 
+                    ? "border-gray-800" 
+                    : "border-gray-300 text-gray-600"
                 }`}
               >
                 {sliderData[category].label} {/* Use the custom label */}
@@ -370,4 +377,3 @@ const styles = `
     scrollbar-width: none; /* Firefox */
   }
 `;
-

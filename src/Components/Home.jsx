@@ -59,7 +59,7 @@ const Home = () => {
         }}
       ></div>
       <div className="relative flex flex-col items-center justify-center min-h-screen w-full z-10 ">
-        <h1 className="text-4xl font-bold mb-2">Buy or rent vetted properties at the</h1>
+        <h1 className="text-4xl font-bold mb-2 text-center">Buy or rent vetted properties at the</h1>
         <h2 className="text-4xl mb-6 hidden sm:block text-center leading-tight  font-bold">most trusted online real estate portal</h2>
         <div className="flex space-x-4 mb-6">
           <button className="bg-white border text-gray-900 border-white px-6 py-2 rounded-lg hover:bg-gray-300 hover:text-black">
@@ -98,36 +98,35 @@ const Home = () => {
     {/* Show my mian content */}
     <div className="flex flex-col md:flex-row  gap-24 justify-center items-center p-6">
       {/* Card 1 */}
-      <div className="bg-white  mt-10 rounded-2xl p-10 px-4 py-4 w-82 text-center">
+       <div className="bg-white  mt-10 rounded-2xl p-10 px-4 py-4 w-82 text-center">
         <img
           src="./img/houseimg.png"
           alt="Card Image"
-          className=" w-80  align-center h-55 rounded-lg cursor-pointer"
+          className=" w-80  h-55 rounded-lg cursor-pointer"
         />
         <h2 className="text-3xl font-semibold mt-14">Invest</h2>
-        <p className="text-gray-500 mt-10">Invest in fully legal Imarat projects. Our “Ownerships &</p>
+        <p className="text-gray-500 mt-4">Invest in fully legal Imarat projects. Our “Ownerships</p>
         <p className="text-gray-500 ">Approvals, Demand & Delivery” approach ensures fantastic</p>
         <p className="text-gray-500 ">returns with full risk mitigation</p>
-        <div className="mt-4 flex justify-center gap-2">
-        <NavLink to="/invest">
-          <button className="bg-gray-900 text-white px-5 py-3 rounded-lg mt-4">
-           INVEST NOW
+        <div className="flex justify-center gap-2">
+        <NavLink to="/wanted">
+          <button className="bg-gray-900 text-white px-9 py-3 rounded-lg  mt-5">
+          INVEST NOW
           </button>
           </NavLink>
         </div>
       </div>
-
       {/* Card 2 */}
       <div className="bg-white  mt-10 rounded-2xl p-10 px-4 py-4 w-82 text-center">
         <img
           src="./img/houseimg1.png"
           alt="Card Image"
-          className=" w-80  ml-10 h-55 rounded-lg cursor-pointer"
+          className=" w-80  h-55 rounded-lg cursor-pointer"
         />
         <h2 className="text-3xl font-semibold mt-14">Wanted</h2>
         <p className="text-gray-500 mt-10">In just 3 clicks activate a team of experts to find the</p>
         <p className="text-gray-500 ">properties you need</p>
-        <div className="mt-4 flex justify-center gap-2">
+        <div className="flex justify-center gap-2">
         <NavLink to="/wanted">
           <button className="bg-gray-900 text-white px-9 py-3 rounded-lg mt-14">
           WANTED
@@ -139,12 +138,12 @@ const Home = () => {
     {/* Show my features of mian content */}
     <div className="flex items-center justify-center min-h-screen w-full p-4  sm:bg-gray-200 bg-transparent rounded-3xl">
       <div className="p-6 rounded-2xl  w-full max-w-4xl ">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
           <div className="bg-white p-4 rounded-xl shadow-md text-center border-b sm:border-none">
             <img 
               src="./img/rent.png" 
               alt="Card 1" 
-              className="w-50 h-50 mt-10 ml-5 object-cover rounded-lg mb-2" 
+              className="w-50 h-50 object-cover ml-12" 
             />
             <h1 className="text-lg font-semibold mb-2 mt-10">Buy a property</h1>
             <p className="text-md  mb-1 ">Find where “perfect”</p>
@@ -157,7 +156,7 @@ const Home = () => {
             <img 
               src="./img/sell.png" 
               alt="Card 2" 
-              className="w-50 h-50 mt-10 ml-5 object-cover rounded-lg mb-2" 
+              className="w-50 h-50  object-cover rounded-lg mb-2 ml-10" 
             />
             <h1 className="text-lg font-semibold mb-2 mt-10">Sell a property</h1>
             <p className="text-md  mb-1 ">Get the best value</p>
@@ -170,7 +169,7 @@ const Home = () => {
             <img 
               src="./img/buy.png" 
               alt="Card 3" 
-              className="w-50 h-50 mt-10 ml-5 object-cover rounded-lg mb-2" 
+              className="w-50 h-50  object-cover rounded-lg mb-2 ml-10" 
             />
             <h1 className="text-lg font-semibold mb-2 mt-10">Rent a property</h1>
             <p className="text-md  mb-1 ">Live where you</p>
@@ -275,7 +274,6 @@ const Home = () => {
           </div>
           
         </div>
-
         {/* Right Side: Image */}
         <div className="md:w-1/2 hidden md:block">
           <img

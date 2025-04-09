@@ -120,7 +120,7 @@ function Sell() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [showSignIn]);
-//    function of uploading image of computer
+    //    function of uploading image of computer
     const [selectedImage, setSelectedImage] = useState(null);
     const [preview, setPreview] = useState(null);
   
@@ -137,6 +137,20 @@ function Sell() {
         reader.readAsDataURL(file);
       }
     };
+    // show search  bar with  options of size of house 
+   const [isOpen, setIsOpen] = useState(false);
+   const options = [
+    'Kanal',
+    'Marla',
+    'Square Feet',
+    'Square Yards',
+    'Square Meters',
+    'Acres'
+  ];
+
+  const toggleDropdown = () => {
+   setIsOpen(!isOpen);
+  };
    useEffect(() => {
         window.scrollTo(0, 0); // Jab bhi Invest page load ho, scroll top ho
       }, []);
@@ -236,7 +250,7 @@ function Sell() {
     <div className="flex justify-start ml-12 min-h-screen gap-6 p-6 mt-14">
       {/* Left Card */}
       <div className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 p-4 rounded-2xl">
-        <h2 className="text-md font-semibold text-gray-700 mb-5"> What do  you want to do  </h2>
+        <h2 className="text-md font-semibold text-gray-700 mb-5"> What do  you want to do</h2>
         
         {/* Top Two Boxes */}
         <div className="flex gap-5 mb-10 ">
@@ -313,7 +327,7 @@ function Sell() {
         </div>
         {/* which area in property */}
         <div className="max-w-md mx-auto mt-10 relative">
-        <h1 className="font-3xl mb-5 text-gray-700">Which area is your property in?   </h1>
+        <h1 className="font-3xl mb-5 text-gray-700">Which area is your property in?</h1>
       <div className="relative">
         <input
           type="text"
@@ -351,7 +365,7 @@ function Sell() {
     {/* Asking Price */}
 
     <div className="max-w-md mx-auto p-45">
-        <h1 className="mt-5 text-gray-700">What is the asking price?        </h1>
+        <h1 className="mt-5 text-gray-700">What is the asking price?</h1>
       <div className="relative">
         <input
           type="number"
@@ -379,20 +393,55 @@ function Sell() {
           required
         />
       {/*proprty size   */}
-      <h3 className="text-sm font-semibold mb-5 text-gray-700 mt-8">What is the size of your property?  </h3>
-        <input 
-          type="text" 
-          className="w-full p-2 border  mb-2 text-sm text-gray-500" 
-          placeholder="Select the Condition  " 
-        //   value={name} 
-          onChange={(e) => setName(e.target.value)}
-          value={selectedCity}
-          onFocus={() => { setShowCities(true); setShowCountries(false); }}
-          required
+      <div className="max-w-md mx-auto mt-10 relative">
+        <h1 className="text-gray-800 text-md">What is the size of your property?</h1>
+      <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden mt-5">
+        <input
+          type="text"
+          placeholder="0"
+          className="px-4 py-2 w-full focus:outline-none"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
+        <button
+          onClick={toggleDropdown}
+          className="px-4 py-2  text-red-600  focus:outline-none transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className={`h-5 w-5 transform transition-transform ${isOpen ? 'rotate-180' : ''}`}
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+
+      {isOpen && (
+        <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg">
+          {options.map((option, index) => (
+            <div
+              key={index}
+              className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+              onClick={() => {
+                setSearchQuery(option);
+                setIsOpen(false);
+              }}
+            >
+              {option}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
           {/* Additional Details Box */}
           <div className="mt-3">
-          <h3 className="text-sm font-semibold mb-1 mt-8">What do you love about the place?          </h3>
+          <h3 className="text-sm font-semibold mb-1 mt-8">What do you love about the place?</h3>
           <textarea
             className="w-full p-2 border rounded-sm text-sm"
             placeholder="Describe your property in detials "
@@ -406,7 +455,7 @@ function Sell() {
        <div className="max-w-md mx-auto p-6 ">
       {/* Function description at the top */}
       <div className="mb-6">
-        <h2 className="text-md font-semibold text-gray-800 mb-2">Upload images of your property        </h2>
+        <h2 className="text-md font-semibold text-gray-800 mb-2">Upload images of your property</h2>
         <p className="text-gray-600 text-sm">
         Properties with images of good quality
         generate 8X more leads.

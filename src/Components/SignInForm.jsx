@@ -22,10 +22,10 @@ const SignInForm = ({ onClose }) => {
   }, [onClose]);
 
   return (
-    <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50 z-50 px-4">
+    <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-40 z-50 px-4">
       <div
         ref={modalRef}
-        className="bg-white p-6 shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[420px] xl:max-w-[380px] relative transition-all duration-300"
+        className="bg-white p-6 shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-[420px] xl:max-w-[380px] relative transition-all duration-300 rounded-2xl"
       >
         {/* Close Button */}
         <button

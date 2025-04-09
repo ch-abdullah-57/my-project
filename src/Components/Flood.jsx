@@ -46,7 +46,7 @@ const Flood = () => {
       {/* Card with 10-15 lines of text */}
       <div className="flex justify-center items-center px-4 sm:px-6 lg:px-8">
         <div className=" p-6  w-full max-w-2xl">
-          <p className="text-gray-800 text-1xl md:text-1xl">
+          <p className="text-gray-800 text-1xl md:text-1xl ">
           Pakistan has declared a state of emergency as floods have wreaked havoc across the country. The devastating floods have taken more than 1,100 lives including 380 children. More than 33mn people have been impacted, facing displacement and massive infrastructural damages. In this unprecedented climate change emergency, almost 1/3rd of the country is expected to be inundated by the end of the monsoon spell.
           <br /><br />
           Our country today needs the support of its citizens to join hands together and donate to uplift the flood affectees. Let’s become the sturdy scaffolding upon which our afflicted brothers and sisters can stand to build their homes again.          </p>

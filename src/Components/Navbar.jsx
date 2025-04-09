@@ -2,11 +2,15 @@ import { useState, useRef, useEffect } from "react";
 import { X, ChevronDown } from "lucide-react";
 import SignInForm from "./SignInForm";
 import { NavLink } from "react-router-dom";
+import New from "./New";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(null);
   const [isHoveringDropdown, setIsHoveringDropdown] = useState(false);
+
+  const [showModal, setShowModal] = useState(false);
+
   
   const menuItems = ["Buy", "Sell", "Rent"];
 
@@ -127,15 +131,20 @@ const Navbar = () => {
 
             {/* Buttons Centered */}
             <div className="flex gap-2">
-              <NavLink to="/invest"><button className="px-2 py-2 text-gray-800">INVEST</button></NavLink>
-              <button className="px-2 py-2 text-gray-800">BUILDING MATERIAL</button>
-              <button className="px-2 py-2 text-gray-800">MORE</button>
+              <NavLink to="/invest"><button className="px-2 py-2 text-gray-800 text-sm">INVEST</button></NavLink>
+              <button 
+                onClick={() => setShowModal(true)}
+                className="px-2 py-2 text-gray-800 text-sm"
+              >
+              BUILDING MATERIAL
+              </button>
+              <button className="px-2 py-2 text-gray-800 text-sm">MORE</button>
             </div>
           </div>
 
           {/* Additional Buttons at the End */}
           <div className="hidden md:flex gap-2 ml-auto order-4">
-            <NavLink to="/wanted"><button className="px-2 py-2 text-black mr-10 font-medium">WANTED</button></NavLink>
+            <NavLink to="/wanted"><button className="px-2 py-2 text-black mr-10 text-sm">WANTED</button></NavLink>
             <button
               onClick={() => setShowSignIn(true)}
               className="px-2 py-2 mr-20 border font-medium border-gray-900 text-black rounded-lg"
@@ -166,7 +175,7 @@ const Navbar = () => {
           <nav className="flex flex-col gap-4 p-4">
             <button 
               onClick={() => setShowSignIn(true)}
-              className="px-4 py-2 text-gray-900 border border-gray-400 rounded-md"
+              className="px-4 py-2 text-gray-900 border border-gray-400 rounded-md text-xs"
             >
               SIGN IN
             </button>
@@ -174,7 +183,7 @@ const Navbar = () => {
             {["BUY", "SELL", "RENT"].map((item, index) => (
               <div key={index} className="relative">
                 <button 
-                  className="flex items-center w-full text-gray-700 text-sm hover:text-gray-400"
+                  className="flex items-center w-full text-gray-700  hover:text-gray-400 text-xs font-bold"
                   onClick={() => setDropdownOpen(dropdownOpen === index ? null : index)}
                 >
                   {item}
@@ -202,12 +211,19 @@ const Navbar = () => {
               </div>
             ))}
             {/* More buttons */}
-            <button className="px-2 py-2 text-gray-700 mr-28 text-sm text-left">More</button>
-            <NavLink to="/invest"><button className="px-2 py-2 text-gray-700 mr-28 text-sm text-left">Invest</button></NavLink>
-            <button className="px-2 py-2 text-gray-700 mr-9 text-sm text-left">Building Materials</button>
-            <NavLink to="/wanted"><button className="px-2 py-2 text-gray-900 border border-gray-400 rounded-md">WANTED</button></NavLink>
+            <button className="px-2 py-2 text-gray-700 mr-28 text-xs text-left">More</button>
+            <NavLink to="/invest"><button className="px-2 py-2 text-gray-700 mr-28 text-xs text-left">Invest</button></NavLink>
+            <button 
+            onClick={() => setShowModal(true)}
+            className="px-2 py-2 text-gray-700 mr-9 text-xs text-left"
+            >
+            Building Materials
+            </button>
+            <NavLink to="/wanted"><button className="px-2 py-2 text-gray-900 border border-gray-400 rounded-md text-xs mt-10">WANTED</button></NavLink>
           </nav>
         </div>
+        {showModal && <New onClose={() => setShowModal(false)} />}
+
       </nav>
       {showSignIn && <SignInForm onClose={() => setShowSignIn(false)} ref={formRef} />}
     </div>

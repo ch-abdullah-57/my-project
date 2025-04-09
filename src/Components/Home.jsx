@@ -102,7 +102,7 @@ const Home = () => {
         <img
           src="./img/houseimg.png"
           alt="Card Image"
-          className=" w-80  ml-10 h-55 rounded-lg cursor-pointer"
+          className=" w-80  align-center h-55 rounded-lg cursor-pointer"
         />
         <h2 className="text-3xl font-semibold mt-14">Invest</h2>
         <p className="text-gray-500 mt-10">Invest in fully legal Imarat projects. Our “Ownerships &</p>
@@ -297,14 +297,14 @@ const Home = () => {
             alt="Card 1"
             className="w-32 h-20 mb-5 ml-3"
           />
-          <p className="text-gray-800 ml-3 text-sm line-clamp-2">Roshan Apna Ghar is an initiative led by the </p>
-          <p className='text-gray-800 ml-3 text-sm'>State Bank of Pakistan (SBP) that aims to ease</p>
-          <p className='text-gray-800 ml-3 text-sm'>the Pakistani diaspora around the world. The</p>
-          <p className='text-gray-800 ml-3 text-sm'>scheme is available to all the customers of</p>
-          <p className='text-gray-800 ml-3 text-sm'>Roshan Digital Account (RDA)</p> 
+          <p className="text-gray-800 ml-3 text-xs line-clamp-2">Roshan Apna Ghar is an initiative led by the </p>
+          <p className='text-gray-800 ml-3 text-xs'>State Bank of Pakistan (SBP) that aims to ease</p>
+          <p className='text-gray-800 ml-3 text-xs'>the Pakistani diaspora around the world. The</p>
+          <p className='text-gray-800 ml-3 text-xs'>scheme is available to all the customers of</p>
+          <p className='text-gray-800 ml-3 text-xs'>Roshan Digital Account (RDA)</p> 
           <NavLink
-            to="/card1"
-            className=" text-red-600 px-4 py-2  mt-3 text-sm"
+            to="/bank"
+            className=" text-red-600 px-4 py-2  mt-3 text-xs"
           >
             READ MORE
           </NavLink>
@@ -317,15 +317,15 @@ const Home = () => {
             alt="Card 2"
             className="w-32 h-20 mb-4 ml-3" 
           />
-          <p className="text-gray-800 text-sm ml-3 line-clamp-2">This is the second card with two lines of text.</p>
-          <p className='text-gray-800 ml-3 text-sm'>Flood Relief Fund is an initiative led by</p>
-          <p className='text-gray-800 ml-3 text-sm'>Graana.com in collaboration with Pak Army.</p>
-          <p className='text-gray-800 ml-3 text-sm'>Pakistan has declared a state of emergency as</p>
-          <p className='text-gray-800 ml-3 text-sm'>floods have wreaked havoc across the country.</p>
-          <p className='text-gray-800 ml-3 text-sm'>The devastating floods</p>
+          <p className="text-gray-800 text-xs ml-3 line-clamp-2">This is the second card with two lines of text.</p>
+          <p className='text-gray-800 ml-3 text-xs'>Flood Relief Fund is an initiative led by</p>
+          <p className='text-gray-800 ml-3 text-xs'>Graana.com in collaboration with Pak Army.</p>
+          <p className='text-gray-800 ml-3 text-xs'>Pakistan has declared a state of emergency as</p>
+          <p className='text-gray-800 ml-3 text-xs'>floods have wreaked havoc across the country.</p>
+          <p className='text-gray-800 ml-3 text-xs'>The devastating floods</p>
           <NavLink
             to="/flood"
-            className=" text-red-600 px-4 py-2 text-sm mt-2"
+            className=" text-red-600 px-4 py-2 text-xs mt-2"
           >
             RAED MORE
           </NavLink>
@@ -339,14 +339,14 @@ const Home = () => {
             className="w-32 h-20 mb-4 ml-3"
           />
           <p className="text-gray-800 ml-3 line-clamp-2"></p>
-          <p className='text-gray-800 ml-3 text-sm'>ESG is vital for curating a sustainable</p>
-          <p className='text-gray-800 ml-3 text-sm'>ecosystem, initiative led by Graana.com.As the</p>
-          <p className='text-gray-800 ml-3 text-sm'>8th most affected region by climate change, it</p>
-          <p className='text-gray-800 ml-3 text-sm'>is high time Pakistan’s private sector shifts</p>
-          <p className='text-gray-800 ml-3 text-sm'>towards eco-friendly</p>
+          <p className='text-gray-800 ml-3 text-xs'>ESG is vital for curating a sustainable</p>
+          <p className='text-gray-800 ml-3 text-xs'>ecosystem, initiative led by Graana.com.As the</p>
+          <p className='text-gray-800 ml-3 text-xs'>8th most affected region by climate change, it</p>
+          <p className='text-gray-800 ml-3 text-xs'>is high time Pakistan’s private sector shifts</p>
+          <p className='text-gray-800 ml-3 text-xs'>towards eco-friendly</p>
           <NavLink
             to="/card3"
-            className=" text-red-600 px-4 py-2 text-sm mt-5 "
+            className=" text-red-600 px-4 py-2 text-xs mt-5 "
           >
           READ MORE
           </NavLink>
@@ -1075,7 +1075,7 @@ const Home = () => {
               </li>
               <li className="mb-2">
                 <NavLink 
-                  to="/home2" 
+                  to="/imageslider2" 
                   className="text-gray-700  text-xs hover:text-red-500 leading-tight"
                   activeClassName="font-bold"
                 >
@@ -1084,7 +1084,7 @@ const Home = () => {
               </li>
               <li className="mb-2">
                 <NavLink 
-                  to="/home3" 
+                  to="/imageslider3" 
                   className="text-gray-700  text-xs hover:text-red-500 leading-tight"
                   activeClassName="font-bold"
                 >
@@ -1240,48 +1240,6 @@ const Home = () => {
         <div className="border-t border-gray-300"></div>
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

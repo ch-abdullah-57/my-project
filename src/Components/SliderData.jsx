@@ -199,13 +199,13 @@ function ImageSlider({ images }) {
         <>
           <button
             onClick={prevSlide}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-1 rounded-full"
+            className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-transparent text-black p-1 rounded-full"
           >
             ◀
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-1 rounded-full"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-transparent text-black p-1 rounded-full"
           >
             ▶
           </button>

@@ -9,6 +9,9 @@ import Flood from './Components/Flood';
 import ImageSlider from './Components/ImageSlider';
 import Sell from './Components/Sell';
 import ImageSlider1 from './Components/ImageSlider1';
+import ImageSlider2 from './Components/ImageSlider2';
+import Bank from './Components/Bank';
+import ImageSlider3 from './Components/ImageSlider3';
 
 function App() {
 
@@ -24,6 +27,9 @@ function App() {
         <Route path="/imageslider" element={<ImageSlider />} />
         <Route path="/sell" element={<Sell />} />
         <Route path="/imageslider1" element={<ImageSlider1 />} />
+        <Route path="/imageslider2" element={<ImageSlider2 />} />
+        <Route path="/imageslider3" element={<ImageSlider3 />} />
+        <Route path="/bank" element={<Bank />} />
       </Routes>
       <Footer></Footer>
     </Router>   

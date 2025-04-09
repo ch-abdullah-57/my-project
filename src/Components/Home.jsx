@@ -273,6 +273,7 @@ const Home = () => {
               </div>
             </button>
           </div>
+          
         </div>
 
         {/* Right Side: Image */}
